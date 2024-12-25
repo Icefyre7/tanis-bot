@@ -52,7 +52,7 @@ async def on_message(message):
 
     # Else check for a 1/100 chance
     else:    
-        if random.randint(1, 18) == 1:
+        if random.randint(1, 22) == 1:
             emojiChance = random.randint(0,5)
             await message.channel.send(emojis[emojiChance])
 
