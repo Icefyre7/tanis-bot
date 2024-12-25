@@ -36,6 +36,7 @@ bot = commands.Bot(command_prefix="!", intents=intents)
 @bot.event
 async def on_message(message):
     # Ignore bot's own messages to avoid infinite loops
+    image = False
     if message.author == bot.user:
         return
 
