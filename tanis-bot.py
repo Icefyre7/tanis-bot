@@ -46,12 +46,12 @@ async def on_message(message):
             if attachment.content_type and "image" in attachment.content_type:
                 image = True
         if image == True:
-            if random.randint(1, 50) == 1:
+            if random.randint(1, 25) == 1:
                 await message.reply("Wish someone would do this to me", mention_author=True)
 
     # Else check for a 1/100 chance
     else:    
-        if random.randint(1, 100) == 1:
+        if random.randint(1, 25) == 1:
             emojiChance = random.randint(0,5)
             emojis = [":gort:", ":gort:", ":yawn:", ":coma:", ":huh:", ":salami:"]
             await message.channel.send(emojis[emojiChance])
