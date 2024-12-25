@@ -24,4 +24,4 @@ A simple and customizable Discord bot built with Python. This bot includes the f
 
 ## Setup
 
-- Clone the repo and run the bot.
+- Clone the repo and run the bot. Token in a .env file is required.

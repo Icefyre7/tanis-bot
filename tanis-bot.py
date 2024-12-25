@@ -1,20 +1,29 @@
-import discord
+## Tanis Bot
+
 import random
 import os
 import subprocess
 import sys
-from discord.ext import commands
-from dotenv import load_dotenv
 
 # List required packages
-required_packages = ["discord.py", "python-dotenv"]
+discord_package = "discord.py"
+dotenv_package= "python-dotenv"
 
-for package in required_packages:
-    try:
-        __import__(package.split('.')[0])  # Import the base module
-    except ImportError:
-        print(f"Package {package} not found. Installing...")
-        subprocess.check_call([sys.executable, "-m", "pip", "install", package])
+try:
+    __import__(discord_package.split('.')[0])  # Import the base module
+except ImportError:
+    print(f"Package {discord_package} not found. Installing...")
+    subprocess.check_call([sys.executable, "-m", "pip", "install", discord_package])
+try:
+    __import__("dotenv")  # Import the base module
+except ImportError:
+    print(f"Package {dotenv_package} not found. Installing...")
+    subprocess.check_call([sys.executable, "-m", "pip", "install", dotenv_package])
+
+# Import needed packages
+import discord
+from discord.ext import commands
+from dotenv import load_dotenv
 
 load_dotenv()
 TOKEN = os.getenv("DISCORD_TOKEN")
