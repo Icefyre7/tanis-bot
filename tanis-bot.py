@@ -53,7 +53,7 @@ async def on_message(message):
     else:    
         if random.randint(1, 100) == 1:
             emojiChance = random.randint(0,5)
-            emojis = [":gort:", ":gort:", ":yawn:", ":coma:", ":HUH:" ,":Salami:"]
+            emojis = [":gort:", ":gort:", ":yawn:", ":coma:", ":huh:", ":salami:"]
             await message.channel.send(emojis[emojiChance])
 
     # Allow other commands to still work
