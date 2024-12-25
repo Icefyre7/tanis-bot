@@ -32,7 +32,7 @@ intents = discord.Intents.default()
 intents.messages = True  # Enable message intents
 intents.message_content = True  # Allow content analysis
 bot = commands.Bot(command_prefix="!", intents=intents)
-emojis = [":gort:", ":gort:", ":yawn:", ":coma:", ":huh:", ":salami:"]
+emojis = ["<:gort:1308233891563307009>", "<:gort:1308233891563307009>", "<:yawn:1294562228984614983>", "<:coma:1230715400673558538>", "<:huh:1294556278101774389>", "<:salami:1249838735709835395>"]
 
 @bot.event
 async def on_message(message):
